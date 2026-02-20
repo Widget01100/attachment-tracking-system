@@ -15,68 +15,59 @@
                     <h5 class="mb-3">Account Information</h5>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="{{ user_form.username.id_for_label }}" class="form-label">Username</label>
-                            {{ user_form.username }}
-                            {% if user_form.username.errors %}
-                                <div class="text-danger">{{ user_form.username.errors }}</div>
-                            {% endif %}
+                            <label for="id_username" class="form-label">Username</label>
+                            <input type="text" name="username" class="form-control" required id="id_username">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="{{ user_form.email.id_for_label }}" class="form-label">Email</label>
-                            {{ user_form.email }}
-                            {% if user_form.email.errors %}
-                                <div class="text-danger">{{ user_form.email.errors }}</div>
-                            {% endif %}
+                            <label for="id_email" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" required id="id_email">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="{{ user_form.first_name.id_for_label }}" class="form-label">First Name</label>
-                            {{ user_form.first_name }}
+                            <label for="id_first_name" class="form-label">First Name</label>
+                            <input type="text" name="first_name" class="form-control" required id="id_first_name">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="{{ user_form.last_name.id_for_label }}" class="form-label">Last Name</label>
-                            {{ user_form.last_name }}
+                            <label for="id_last_name" class="form-label">Last Name</label>
+                            <input type="text" name="last_name" class="form-control" required id="id_last_name">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="{{ user_form.password1.id_for_label }}" class="form-label">Password</label>
-                            {{ user_form.password1 }}
+                            <label for="id_password1" class="form-label">Password</label>
+                            <input type="password" name="password1" class="form-control" required id="id_password1">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="{{ user_form.password2.id_for_label }}" class="form-label">Confirm Password</label>
-                            {{ user_form.password2 }}
-                            {% if user_form.password2.errors %}
-                                <div class="text-danger">{{ user_form.password2.errors }}</div>
-                            {% endif %}
+                            <label for="id_password2" class="form-label">Confirm Password</label>
+                            <input type="password" name="password2" class="form-control" required id="id_password2">
                         </div>
                     </div>
 
                     <h5 class="mb-3 mt-4">Student Information</h5>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="{{ profile_form.registration_number.id_for_label }}" class="form-label">Registration Number</label>
-                            {{ profile_form.registration_number }}
+                            <label for="id_registration_number" class="form-label">Registration Number</label>
+                            <input type="text" name="registration_number" class="form-control" required id="id_registration_number">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="{{ profile_form.course.id_for_label }}" class="form-label">Course</label>
-                            {{ profile_form.course }}
+                            <label for="id_course" class="form-label">Course</label>
+                            <input type="text" name="course" class="form-control" required id="id_course">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="{{ profile_form.university.id_for_label }}" class="form-label">University</label>
-                            {{ profile_form.university }}
+                            <label for="id_university" class="form-label">University</label>
+                            <input type="text" name="university" class="form-control" required id="id_university">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="{{ profile_form.phone.id_for_label }}" class="form-label">Phone Number</label>
-                            {{ profile_form.phone }}
+                            <label for="id_phone" class="form-label">Phone Number</label>
+                            <input type="text" name="phone" class="form-control" required id="id_phone">
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="{{ profile_form.year_of_study.id_for_label }}" class="form-label">Year of Study</label>
-                        {{ profile_form.year_of_study }}
+                        <label for="id_year_of_study" class="form-label">Year of Study</label>
+                        <input type="number" name="year_of_study" class="form-control" min="1" max="4" required id="id_year_of_study">
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100 mt-3">Register</button>
@@ -89,10 +80,4 @@
         </div>
     </div>
 </div>
-
-<script>
-document.querySelectorAll('input, select, textarea').forEach(element => {
-    element.classList.add('form-control');
-});
-</script>
 {% endblock %}
