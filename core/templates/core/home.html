@@ -1,0 +1,36 @@
+﻿{% extends 'core/base.html' %}
+
+{% block title %}Home - Attachment System{% endblock %}
+
+{% block content %}
+<div class="row align-items-center min-vh-75">
+    <div class="col-md-6">
+        <h1 class="display-4 mb-4">University Attachment Tracking System</h1>
+        <p class="lead mb-4">
+            Streamline your industrial attachment process with our comprehensive management system.
+            Track applications, monitor progress, and evaluate performance all in one place.
+        </p>
+        {% if not user.is_authenticated %}
+            <div class="mt-4">
+                <a href="{% url 'register' %}" class="btn btn-primary btn-lg me-2">Get Started</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-primary btn-lg">Login</a>
+            </div>
+        {% endif %}
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Key Features</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">✓ Online attachment applications</li>
+                    <li class="list-group-item">✓ Digital logbook management</li>
+                    <li class="list-group-item">✓ Supervisor evaluations</li>
+                    <li class="list-group-item">✓ Document upload & storage</li>
+                    <li class="list-group-item">✓ Real-time progress tracking</li>
+                    <li class="list-group-item">✓ Automated notifications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
